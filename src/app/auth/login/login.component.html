@@ -1,0 +1,57 @@
+<div class="background" style="width: 100vw; height: 100vh; position: relative;">
+    <img src="assets/resources/images/login-background.jpg" class="background-image" alt="">
+  
+    <div class="container-fluid" style="position: absolute;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="float-end">
+            <img class="black-logo" src="../../../assets/resources/logos/Logo-G-M3.png" alt="">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-7">
+          <img class="white-logo" src="../../../assets/resources/logos/Logo-B-M3.png" alt="">
+        </div>
+        <div class="col-md-5 login-container">
+          <div class="login-tittle text-center">
+            <h1>Iniciar sesion</h1>
+            <p>Introduce tu correo y contraseña para Acceder</p>
+            <br>
+          </div>
+  
+  
+          <!-- <form (submit)="onLogin()" class="form-login"> -->
+            <form  class="form-login">
+            <div class="group group-login">
+              <!-- <input type="text" [(ngModel)]="correo" name="correo" class="group-left" required> -->
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label for="username" class="ligth-green">Correo:</label>
+            </div>
+            <div class="group group-password">
+              <!-- <input type="password" [(ngModel)]="password" name="password" required> -->
+              <span class="highlight"></span>
+              <span class="password-bar"></span>
+              <label for="password" class="ligth-green">Contraseña:</label>
+            </div>
+            <div class="button-box text-center">
+              <button type="submit" class="btn button-login">Iniciar sesión</button>
+            </div>
+          </form>
+          <div class="text-center recovery-label">
+            <!-- <form (ngSubmit)="goToForgotPassword()">
+              <a href="/forgot-password" class="dark-green">¿Olvidaste tu contraseña?</a>
+            </form> -->
+            <form>
+              <p class="button-label">¿Aún no cuentas con una cuenta?
+                <a  href="/auth/register" class="ligth-green"> Registrarse</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

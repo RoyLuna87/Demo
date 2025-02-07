@@ -1,0 +1,299 @@
+.background-image{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+.group-login{
+  margin-top: 3vh;
+  margin-left: 5vh
+}
+.group-password{
+  position: relative;
+  margin-left: 8vh;
+}
+.paragraph {
+  color: var(--dark-green);
+  padding-left: 2vh;
+}
+
+.white-logo{
+  width: 20%;
+  margin-left: 15vw;
+  margin-top: 27vh;
+  position: fixed;
+}
+
+.black-logo{
+  width: 10vh;
+}
+
+.login-tittle h1 {
+  font-size: 3.1rem;
+  color: var(--light-green) !important;
+}
+
+.login-tittle p {
+  font-size: 1.1 rem;
+}
+
+.login-top {
+  padding-top: 15vh;
+}
+
+.email-input{
+  border: 0;
+  outline: 0;
+  margin-left: 4vh;
+  border-bottom:  1px solid darkgrey;
+}
+
+.password-input{
+  border: 0;
+  outline: 0;
+  margin-left: 6vh;
+  border-bottom:  1px solid darkgrey;
+}
+
+.group-login input{
+  width: 55%;
+}
+
+.group-password input{
+  width: 65%;
+}
+
+.group-login label{
+  font-size: 1.1rem;
+}
+
+.group-password label{
+  font-size: 1.1rem;
+}
+
+.group-password i{
+  padding-top: 2vh;
+  left: 60%;
+  top: 0px;
+  position: absolute;
+}
+
+.recovery-label{
+  color: darkgrey;
+  padding-left: 2vw;
+  padding-top: 0.7vh;
+  font-size: 1.1rem;
+}
+
+.button-top{
+  padding-top: 5vh;
+}
+
+.button-box{
+  margin-left: 0px;
+  text-align: center;
+}
+
+.button-label{
+  color: darkgrey;
+  font-size: 1.1rem;
+  padding-top: 0.7vh;
+}
+
+.button-login{
+  color: white;
+  padding: 1vh 0 1vh 0;
+  background-color: var(--dark-green);
+  border-radius: 15px;
+  width: 78%;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top:-30px;
+  font-size:1.4rem;
+  color:var(--light-green);
+}
+
+input:-webkit-autofill ~ label {
+  top:-30px;
+  font-size:1.4rem;
+  color:var(--light-green);
+}
+
+input {
+  font-size:1.4rem;
+  padding:7px 7px 7px 4.5px;
+  display:block;
+  width:50%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+
+input:focus {
+  outline:none;
+}
+
+label {
+  color:#999;
+  font-size:1.1rem;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+.bar, .password-bar {
+  position:relative;
+  display:block;
+  width:100%;
+}
+
+.bar:before, .bar:after, .password-bar:before, .password-bar:after{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:var(--light-green);
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:55%;
+}
+
+input:focus ~ .password-bar:before, input:focus ~ .password-bar:after {
+  width:65%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:20%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+.group {
+  position:relative;
+  margin-bottom:45px;
+}
+
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:var(--light-green); }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:var(--light-green); }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:var(--light-green); }
+  to 	{ width:0; background:transparent; }
+}
+
+@media screen and (max-width: 1680px) {
+  .button-box{
+      margin-left: 4vw;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  .group-login{
+      margin-left: 5vw;
+  }
+  .group-password{
+      width: 100%;
+      margin-left: 7vw;
+  }
+  .group-login input{
+      width: 70%;
+  }
+  .group-password input{
+      width: 70%;
+  }
+  .recovery-label{
+      padding-left: 1vw;
+  }
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+      width:70%;
+  }
+  input:focus ~ .password-bar:before, input:focus ~ .password-bar:after {
+      width:70%;
+  }
+  .button-box{
+      margin-left: 10vw;
+      text-align: center;
+  }
+  .button-login{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .background-image{
+      display: none;
+  }
+  .white-logo{
+      display: none;
+  }
+  .black-logo{
+      width: 20vw;
+  }
+  .login-tittle{
+      text-align: center;
+  }
+  .login-top {
+      padding-top: 0;
+  }
+  .group-login{
+      margin-left: 0px !important;
+  }
+  .group-password{
+      position: relative;
+      margin-left: 0px !important;
+  }
+  .group-login input{
+      margin-left: 0;
+      width: 100%;
+  }
+  .group-password input{
+      margin-left: 0;
+      width: 100%;
+  }
+  .group-password i{
+      padding-top: 2vh;
+      left: 95%;
+      top: 0px;
+      position: absolute !important;
+  }
+  .recovery-label{
+      text-align: center;
+  }
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+      width:100%;
+  }
+  input:focus ~ .password-bar:before, input:focus ~ .password-bar:after {
+      width:100%;
+  }
+  .button-top{
+      margin-left: 0px;
+  }
+}

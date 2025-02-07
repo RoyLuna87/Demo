@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Importa el módulo de formularios
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Importa el
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

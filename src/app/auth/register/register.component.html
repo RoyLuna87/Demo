@@ -1,0 +1,96 @@
+<div class="background" style="width: 100vw; height: 100vh; position: relative;">
+    <img src="assets/resources/images/login-background.jpg" class="background-image" alt="">
+  
+    <div class="container-fluid" style="position: absolute;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="float-end">
+            <img class="black-logo" src="../../../assets/resources/logos/Logo-G-M3.png" alt="">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-7">
+          <img class="white-logo" src="../../../assets/resources/logos/Logo-B-M3.png" alt="">
+        </div>
+        <div class="col-md-5 register-container">
+          <div class="login-tittle text-center">
+            <h1>Registrarse</h1>
+            <p>¡Crea tu cuenta para empezar!</p>
+          </div>
+  
+          <form (submit)="onRegister()" class="form-register">
+            <!-- Nombre y Apellido Paterno en el mismo nivel -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="group group-username">
+                  <input type="text" [(ngModel)]="nombre" name="nombre" class="group-left" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label for="username" class="ligth-green">Nombre:</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group group-apellido-paterno">
+                  <input type="text" [(ngModel)]="apellidoPaterno" name="apellidoPaterno" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label for="apellidoPaterno" class="ligth-green">Apellido Paterno:</label>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Apellido Materno y Correo en el siguiente nivel -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="group group-apellido-materno">
+                  <input type="text" [(ngModel)]="apellidoMaterno" name="apellidoMaterno" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label for="apellidoMaterno" class="ligth-green">Apellido Materno:</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group group-email">
+                  <input type="email" [(ngModel)]="email" name="email" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label for="email" class="ligth-green">Correo Electrónico:</label>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Número de Empleado y Contraseña en el último nivel -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="group group-num-empleado">
+                  <input type="number" [(ngModel)]="numeroEmpleado" name="numeroEmpleado" required>
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label for="numeroEmpleado" class="ligth-green">Número de Empleado:</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="group group-password">
+                  <input type="password" [(ngModel)]="password" name="password" required>
+                  <span class="highlight"></span>
+                  <span class="password-bar"></span>
+                  <label for="password" class="ligth-green">Contraseña:</label>
+                </div>
+              </div>
+            </div>
+  
+            <div class="button-box text-center">
+              <button type="submit" class="btn button-login">Registrarse</button>
+            </div>
+          </form>
+  
+          <div class="text-center recovery-label">
+            <a href="/login" class="dark-green">Volver a iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
